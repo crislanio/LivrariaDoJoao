@@ -20,16 +20,14 @@
 		<form:errors cssStyle="color:red" path="livro.nome"/> <br />
 				
 		<label>Ação</label> <select
-					name="acao" required>
+					name="categoria" required>
 					<option selected value="aventura">Aventura</option>
-					<option value="drama">Drama</option>
-					<option value="comedia">Comédia</option>
+					<option selected value="drama">Drama</option>
+					<option selected value="comedia">Comédia</option>
 		</select><br /> 
-				
-				
-				
+								
 		Valor: <input type="text" name="valor" /> <br />
-		<form:errors cssStyle="color:red" path="noticia.subtitulo"/> <br />
+		<form:errors cssStyle="color:red" path="livro.valor"/> <br />
 		Quantidade em estoque: <input type="text" name="qtdEstoque" /> <br />
 		<form:errors cssStyle="color:red" path="livro.qtdEstoque"/> <br />
 		

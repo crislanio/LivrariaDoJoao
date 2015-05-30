@@ -52,9 +52,9 @@
 							<span class="icon-magic-wand"></span>
 						</div>
 						<div class="iconbox-text">
-							<h3 class="iconbox-title">Inserir Cliente</h3>
+							<h3 class="iconbox-title">Buscar no Estoque</h3>
 							<div class="iconbox-desc">
-								<a href="formularioCliente">Inserir Cliente na Livraria</a>
+								<a href="buscarLivro">Busca Livros Por Categoria</a>
 							</div>
 						</div>
 					</div>

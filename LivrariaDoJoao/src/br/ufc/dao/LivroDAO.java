@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Vector;
+
+import javax.swing.JOptionPane;
 
 import br.ufc.model.Livro;
 
@@ -18,7 +21,8 @@ public class LivroDAO {
 	public void inserir(Livro livro) {
 
 		// contruindo o SQL de inserção
-		String sql = "INSERT INTO livro " + "(id,nome,valor,qtdEstoque, categoria)"
+		String sql = "INSERT INTO livro "
+				+ "(id,nome,valor,qtdEstoque, categoria)"
 				+ "values (?,?,?,?,?)";
 
 		try {
@@ -29,7 +33,6 @@ public class LivroDAO {
 			stmt.setInt(4, livro.getQtdEstoque());
 			stmt.setString(5, livro.getCategoria());
 
-			
 			stmt.execute();
 			stmt.close();
 			conn.close();
@@ -38,7 +41,7 @@ public class LivroDAO {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void delete_livro(Livro livro) {
 
 		String sql = "delete from livro where id = ?";
@@ -58,7 +61,7 @@ public class LivroDAO {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public ArrayList<Livro> getListar() {
 		ArrayList<Livro> livros = new ArrayList<Livro>();
 
@@ -72,7 +75,7 @@ public class LivroDAO {
 				Livro u = new Livro();
 				u.setId(rs.getInt(1));
 				u.setNome(rs.getString(2));
-				u.setCategoria(rs.getString(3));				
+				u.setCategoria(rs.getString(3));
 				u.setValor(rs.getDouble(4));
 				u.setQtdEstoque(rs.getInt(5));
 				livros.add(u);
@@ -87,4 +90,31 @@ public class LivroDAO {
 		return livros;
 	}
 
+	public Vector<Livro> buscar(String categoria) {
+		Vector<Livro> resultados = new Vector<Livro>();
+		String sql = ("SELECT * FROM livro WHERE categoria LIKE '" + categoria + "%';");
+		ResultSet rs;
+		try {
+			PreparedStatement comando = conn.prepareStatement(sql);
+
+			rs = comando.executeQuery();
+
+			while (rs.next()) {
+				Livro temp = new Livro();
+				// pega todos os atributos do livro
+				temp.setId(rs.getLong("id"));
+				temp.setNome(rs.getString("nome"));
+				temp.setValor(rs.getDouble("valor"));
+				temp.setQtdEstoque(rs.getInt("qtdEstoque"));
+				temp.setCategoria(rs.getString("categoria"));
+				resultados.add(temp);
+			}
+			rs.close();
+			comando.close();
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return resultados;
+	}
 }
