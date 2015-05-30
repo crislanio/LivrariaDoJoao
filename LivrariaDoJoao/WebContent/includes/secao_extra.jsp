@@ -34,8 +34,8 @@
 						<h2 class="pfblock-title">Viaje no mundo do saber !!</h2>
 						<div class="pfblock-line"></div>
 						<div class="pfblock-subtitle">
-							Esse projeto tem uma iniciativa de divulgação da 
-							<a href="http://www.quixada.ufc.br/" target="_blank">Universidade Federal do Ceará</a>
+							Esse projeto tem uma iniciativa de divulgação de 
+							<a href="http://www.crislaniomacedo.zz.vc/" target="_blank">crislaniomacedo.zz.vc</a>
 						</div>
 					</div>
 
@@ -100,9 +100,9 @@
 							<span class="icon-question"></span>
 						</div>
 						<div class="iconbox-text">
-							<h3 class="iconbox-title">Blog Pessoal</h3>
+							<h3 class="iconbox-title">Comprar Livro</h3>
 							<div class="iconbox-desc">
-								<a href="http://www.crislaniomacedo.zz.vc/" target="_blank">crislaniomacedo.zz.vc</a>
+							<a href="vendaLivro">Listar Livros Cadastrados</a>
 							</div>
 						</div>
 					</div>

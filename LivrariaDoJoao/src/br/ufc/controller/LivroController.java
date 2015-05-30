@@ -16,20 +16,21 @@ import br.ufc.dao.LivroDAO;
 import br.ufc.model.Livro;
 
 @Controller
-public class LivroController {
+public class LivroController{
 
 	@RequestMapping("formularioLivro")
 	public String formularioLivro() {
 		return "inserir_livro";
 	}
 
-	public String categoria() {
+	public String categoria(String categoria) {
 		FabricaDeConexoes fc = new FabricaDeConexoes();
 		Connection conn = fc.getConexao();
 		LivroDAO aDAO = new LivroDAO(conn);
 		Livro livro = new Livro();
 
-		String acao = null;
+		String acao = new String();
+		acao = "aventura";
 		if (acao.equalsIgnoreCase("aventura")) {
 			livro.setCategoria("aventura");
 			livro.getCategoria();

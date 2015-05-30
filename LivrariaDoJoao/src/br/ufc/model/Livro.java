@@ -3,8 +3,6 @@ package br.ufc.model;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
-
 public class Livro {
 	private long id;
 	@NotNull
@@ -72,7 +70,9 @@ public class Livro {
 	}
 
 	public void setQtdEstoque(int qtdEstoque) {
+		
 		this.qtdEstoque = qtdEstoque;
+		
 	}
 
 	@Override
