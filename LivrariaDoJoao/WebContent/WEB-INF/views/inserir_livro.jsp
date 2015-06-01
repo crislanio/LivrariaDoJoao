@@ -18,7 +18,7 @@
 	<form  action="adicionarLivro" method="post">
 		Nome: <input type="text" name="nome" /> <br />
 		<form:errors cssStyle="color:red" path="livro.nome"/> <br />
-				
+
 		<label>Ação</label> <select
 					name="categoria" required>
 					<option selected value="aventura">Aventura</option>
@@ -35,9 +35,15 @@
 	</form>
 	<div class="linha">
 	
-	<section>
-		<footer> <c:import url="/includes/rodape.jsp" /> </footer>
-	</section>
+	<div class="linha">
+		<section>
+			<c:import url="/includes/secao_extra.jsp" />
+			<footer>
+				<c:import url="/includes/rodape.jsp" />
+			</footer>
+		</section>
 	</div>
+	
+	
 </body>
 </html>

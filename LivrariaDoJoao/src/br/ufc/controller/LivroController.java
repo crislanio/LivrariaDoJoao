@@ -53,12 +53,14 @@ public class LivroController{
 	}
 
 	@RequestMapping("buscarPorCategoria")
-	public String buscarPorCategoria(Livro livro) {
+	public String buscarPorCategoria(Livro livro, Model model) {
 		FabricaDeConexoes fc = new FabricaDeConexoes();
 		Connection conn = fc.getConexao();
 		LivroDAO aDAO = new LivroDAO(conn);
 
 		String acao = null;
+		
+		System.out.println("teste s");
 		if (acao.equalsIgnoreCase("aventura")) {
 			livro.setCategoria("aventura");
 			livro.getCategoria();

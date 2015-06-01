@@ -93,6 +93,7 @@ public class LivroDAO {
 		Vector<Livro> resultados = new Vector<Livro>();
 		String sql = ("SELECT * FROM livro WHERE categoria LIKE '" + categoria + "%';");
 		ResultSet rs;
+
 		try {
 			PreparedStatement comando = conn.prepareStatement(sql);
 
