@@ -39,8 +39,8 @@
 						<div class="pfblock-line"></div>
 						<div class="pfblock-subtitle">
 				</br>	
-				<img src="img/cris225x300.jpg" alt="autor">
-				</br>
+				<!-- <img src="img/cris225x300.jpg" alt="autor">
+				 --></br>
 				<b><span style="color: #ff6600;">Localização</span>
 				<ul >
 					<li>Rua Laerte Pinheiro, 10</li>

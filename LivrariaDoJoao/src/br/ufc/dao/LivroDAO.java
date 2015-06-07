@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Vector;
 
-
 import br.ufc.model.Livro;
 
 public class LivroDAO {
@@ -89,6 +88,48 @@ public class LivroDAO {
 		return livros;
 	}
 
+	public Livro getLivro(Long id) {
+
+		String sql = "select * from livro where id =" + id;
+		Livro temp = new Livro();
+		System.out.println("getId " + sql);
+		try {
+
+			PreparedStatement comando = conn.prepareStatement(sql);
+
+			ResultSet rs;
+			rs = comando.executeQuery();
+
+			while (rs.next()) {
+				temp.setId(rs.getLong(1));
+				temp.setNome(rs.getString(2));
+				temp.setQtdEstoque(rs.getInt(3));
+				temp.setValor(rs.getDouble(4));
+				temp.setCategoria(rs.getString(5));
+
+			}
+			rs.close();
+			comando.close();
+		} catch (SQLException ex) {
+			throw new RuntimeException(ex);
+		}
+		return temp;
+	}
+	public Livro reduzirEstoque(Long id) {
+
+		String sql = "update livro set qtdEstoque = qtdEstoque-1 where id =" + id;
+		try {
+
+			PreparedStatement comando = conn.prepareStatement(sql);
+			comando.executeUpdate();
+		
+			comando.close();
+			conn.close();
+		} catch (SQLException ex) {
+			throw new RuntimeException(ex);
+		}
+		return null;
+	}
 	public Vector<Livro> buscar(String categoria) {
 		Vector<Livro> resultados = new Vector<Livro>();
 		String sql = ("SELECT * FROM livro WHERE categoria LIKE '" + categoria + "%';");

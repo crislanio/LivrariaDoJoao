@@ -45,11 +45,12 @@
 
 			<div class="row">
 
+			
 				<div class="col-sm-3">
 
 					<div class="iconbox wow slideInLeft">
 						<div class="iconbox-icon">
-							<span class="icon-magic-wand"></span>
+							<span class="icon-puzzle"></span>
 						</div>
 						<div class="iconbox-text">
 							<h3 class="iconbox-title">Buscar no Estoque</h3>
@@ -84,9 +85,9 @@
 							<span class="icon-badge"></span>
 						</div>
 						<div class="iconbox-text">
-							<h3 class="iconbox-title">Listar Livros</h3>
+							<h3 class="iconbox-title">INformação de Estoque</h3>
 							<div class="iconbox-desc">
-							<a href="listarLivro">Listar Livros Cadastrados</a>
+							<a href="infoEstoque">Ver Informações de Estoque</a>
 							</div>
 						</div>
 					</div>

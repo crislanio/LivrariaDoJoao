@@ -33,6 +33,8 @@
 					<td>${livro.valor}</td>
 					<td>${livro.qtdEstoque}</td>
 					<td>${livro.categoria}</td>
+					<!-- 		<td><h:outputText value=#{livro.valor} /></td>
+			 -->
 					<td><a href="deletarLivro?id=${livro.id}"> Excluir </a></td>
 				</tr>
 			</c:forEach>
