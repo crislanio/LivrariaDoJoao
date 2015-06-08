@@ -15,11 +15,11 @@
 	</h1>
 	<label>Buscar</label>
 	</br>
-	<a href="buscarPorCategoria?categoria=drama"> DRAMA  </a>
+	<a href="buscarPorCategoria?categoria=drama">  DRAMA  </a>
  - 
-	<a href="buscarPorCategoria?categoria=comedia"> COMÉDIA  </a>
+	<a href="buscarPorCategoria?categoria=comedia">  COMÉDIA  </a>
 	 - 
-	<a href="buscarPorCategoria?categoria=aventura"> AVENTURA  </a>
+	<a href="buscarPorCategoria?categoria=aventura">  AVENTURA  </a>
 	</br>
 	<table align="center" border="1px" width="80%">
 		<thead>

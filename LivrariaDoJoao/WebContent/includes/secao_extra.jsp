@@ -34,7 +34,7 @@
 						<h2 class="pfblock-title">Viaje no mundo do saber !!</h2>
 						<div class="pfblock-line"></div>
 						<div class="pfblock-subtitle">
-							Esse projeto tem uma iniciativa de divulgação de 
+							Esse projeto têm uma iniciativa de divulgação de 
 							<a href="http://www.crislaniomacedo.zz.vc/" target="_blank">crislaniomacedo.zz.vc</a>
 						</div>
 					</div>
@@ -53,9 +53,9 @@
 							<span class="icon-puzzle"></span>
 						</div>
 						<div class="iconbox-text">
-							<h3 class="iconbox-title">Buscar no Estoque</h3>
+							<h3 class="iconbox-title">BUSCAR NO ESTOQUE</h3>
 							<div class="iconbox-desc">
-								<a href="buscarLivro">Busca Livros Por Categoria</a>
+								<a href="buscarLivro">BUSCAR LIVROS POR CATEGORIA</a>
 							</div>
 						</div>
 					</div>
@@ -69,9 +69,9 @@
 							<span class="icon-puzzle"></span>
 						</div>
 						<div class="iconbox-text">
-							<h3 class="iconbox-title">Inserir Livro</h3>
+							<h3 class="iconbox-title">INSERIR LIVRO</h3>
 							<div class="iconbox-desc">
-								<a href="formularioLivro">Inserir uma Livro</a>
+								<a href="formularioLivro">INSERIR UM LIVRO</a>
 							</div>
 						</div>
 					</div>
@@ -85,9 +85,9 @@
 							<span class="icon-badge"></span>
 						</div>
 						<div class="iconbox-text">
-							<h3 class="iconbox-title">INformação de Estoque</h3>
+							<h3 class="iconbox-title">INFORMAÇÕES DE ESTOQUE</h3>
 							<div class="iconbox-desc">
-							<a href="infoEstoque">Ver Informações de Estoque</a>
+							<a href="infoEstoque">VER INFORMAÇÕES DE ESTOQUE</a>
 							</div>
 						</div>
 					</div>
@@ -101,9 +101,9 @@
 							<span class="icon-question"></span>
 						</div>
 						<div class="iconbox-text">
-							<h3 class="iconbox-title">Comprar Livro</h3>
+							<h3 class="iconbox-title">COMPRAR LIVRO</h3>
 							<div class="iconbox-desc">
-							<a href="vendaLivro">Listar Livros Cadastrados</a>
+							<a href="vendaLivro">LISTAR LIVROS CADASTRADOS</a>
 							</div>
 						</div>
 					</div>

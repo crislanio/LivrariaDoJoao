@@ -17,48 +17,39 @@ import br.ufc.model.Vendas;
 
 @Controller
 public class VendaController {
-	
+
 	@RequestMapping("processaVendaLivro")
 	public String processaVendaLivro(@RequestParam("id") long id, Livro livro,
 			Model model) {
 		FabricaDeConexoes fc = new FabricaDeConexoes();
 		Connection conn = fc.getConexao();
-		
+
 		System.out.println("ID-- " + id);
 		VendasDAO vDAO = new VendasDAO(conn);
 		Vendas v = new Vendas();
 		LivroDAO uDAO = new LivroDAO(conn);
-		
+
 		livro = uDAO.getLivro(id);
 		v.setId(livro.getId());
 		v.setValor(livro.getValor());
-		
-		// quando chama dá erro: No operations allowed after connection closed.Mas da certo internamente
-		vDAO.inserir(v); // GAMBIS, DEIXEI A CONEXAO ABERTA
+		vDAO.inserir(v); // atenção
 		LivroDAO uDAO2 = new LivroDAO(conn);
-		
+
 		uDAO2.reduzirEstoque(id);
-		
+
 		return "venda_adicionado";
 	}
 
 	@RequestMapping("vendaLivro")
-	public String vendaLivro(Livro livro,
-			Model model) {
+	public String vendaLivro(Livro livro, Model model) {
 
 		FabricaDeConexoes fc = new FabricaDeConexoes();
 		Connection conn = fc.getConexao();
 		LivroDAO uDAO = new LivroDAO(conn);
-		VendasDAO vDAO = new VendasDAO(conn);
-
 		List<Livro> livros;
 		livros = uDAO.getListar();
 
-		List<Vendas> vendas = vDAO.getListar();
-
 		model.addAttribute("livros", livros);
-		model.addAttribute("tamanho", vendas.size());
-
 		try {
 			conn.close();
 		} catch (SQLException e) {

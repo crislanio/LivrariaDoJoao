@@ -10,11 +10,7 @@
 <body>
 	<c:import url="/includes/cabecalho.jsp"/>
 	
-	<h1>
-		Total de Vendas: <b>${tamanho}</b>
-	</h1>
-
-	<table align="center" border="1px" width="80%">
+		<table align="center" border="1px" width="80%">
 		<thead>
 			<tr>
 				<th>Id</th>

@@ -19,7 +19,7 @@
 		Nome: <input type="text" name="nome" /> <br />
 		<form:errors cssStyle="color:red" path="livro.nome"/> <br />
 
-		<label>Ação</label> <select
+		<label>CATEGORIA</label> <select
 					name="categoria" required>
 					<option selected value="aventura">Aventura</option>
 					<option selected value="drama">Drama</option>

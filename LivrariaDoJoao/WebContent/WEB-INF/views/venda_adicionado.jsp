@@ -11,7 +11,7 @@
 	<div class="pfblock-header wow fadeInUp">
 						<div class="pfblock-line"></div>
 						<div class="pfblock-subtitle">
-	O venda <b>${param.nome}</b> foi adicionado com sucesso!<br />	
+	A venda <b>${param.nome}</b> foi adicionada com sucesso!<br />	
 	</div>
 	</div>
 					

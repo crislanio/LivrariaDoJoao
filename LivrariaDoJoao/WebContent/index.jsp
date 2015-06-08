@@ -7,6 +7,7 @@
 </head>
 <body>
 	<c:import url="includes/cabecalho.jsp"/>
+	<c:import url="includes/apresentacao.jsp"/>
 	
 	<div class="linha">
 		<section>

@@ -77,9 +77,11 @@ public class LivroDAO {
 				u.setQtdEstoque(rs.getInt(5));
 				livros.add(u);
 			}
+		
 			rs.close();
 			stmt.close();
 			conn.close();
+	
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
