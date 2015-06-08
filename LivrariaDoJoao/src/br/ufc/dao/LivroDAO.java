@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Vector;
 
 import br.ufc.model.Livro;
 
@@ -115,14 +114,19 @@ public class LivroDAO {
 		}
 		return temp;
 	}
+
 	public Livro reduzirEstoque(Long id) {
 
-		String sql = "update livro set qtdEstoque = qtdEstoque-1 where id =" + id;
+		String sql = "update livro set qtdEstoque = qtdEstoque-1 where id = ?";
+		System.out.println("Id: " + id);
+		System.out.println("SQL: " + sql);
+
 		try {
 
 			PreparedStatement comando = conn.prepareStatement(sql);
+			comando.setLong(1, id);
 			comando.executeUpdate();
-		
+
 			comando.close();
 			conn.close();
 		} catch (SQLException ex) {
@@ -130,15 +134,14 @@ public class LivroDAO {
 		}
 		return null;
 	}
-	public Vector<Livro> buscar(String categoria) {
-		Vector<Livro> resultados = new Vector<Livro>();
+
+	public ArrayList<Livro> buscar(String categoria) {
+		ArrayList<Livro> resultados = new ArrayList<Livro>();
 		String sql = ("SELECT * FROM livro WHERE categoria LIKE '" + categoria + "%';");
-		ResultSet rs;
 
 		try {
 			PreparedStatement comando = conn.prepareStatement(sql);
-
-			rs = comando.executeQuery();
+			ResultSet rs = comando.executeQuery();
 
 			while (rs.next()) {
 				Livro temp = new Livro();
@@ -150,9 +153,11 @@ public class LivroDAO {
 				temp.setCategoria(rs.getString("categoria"));
 				resultados.add(temp);
 			}
+
 			rs.close();
 			comando.close();
 			conn.close();
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

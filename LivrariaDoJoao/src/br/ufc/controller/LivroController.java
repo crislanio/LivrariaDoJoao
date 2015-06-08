@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import br.ufc.dao.FabricaDeConexoes;
 import br.ufc.dao.LivroDAO;
@@ -53,32 +54,17 @@ public class LivroController{
 	}
 
 	@RequestMapping("buscarPorCategoria")
-	public String buscarPorCategoria(Livro livro, Model model) {
+	public String buscarPorCategoria(@RequestParam("categoria") String categoria, Livro livro, Model model) {
 		FabricaDeConexoes fc = new FabricaDeConexoes();
 		Connection conn = fc.getConexao();
 		LivroDAO aDAO = new LivroDAO(conn);
-
-		String acao = null;
 		
-		System.out.println("teste s");
-		if (acao.equalsIgnoreCase("aventura")) {
-			livro.setCategoria("aventura");
-			livro.getCategoria();
-			aDAO.buscar(livro.getCategoria());
-		}
 
-		if (acao.equalsIgnoreCase("drama")) {
-			livro.setCategoria("drama");
+		List<Livro> livros = aDAO.buscar(categoria);
+		
+		model.addAttribute("livros", livros);
+		
 
-			livro.getCategoria();
-			aDAO.buscar(livro.getCategoria());
-		}
-		if (acao.equalsIgnoreCase("acao")) {
-			livro.setCategoria("acao");
-
-			livro.getCategoria();
-			aDAO.buscar(livro.getCategoria());
-		}
 		return "buscar_livros";
 	}
 
