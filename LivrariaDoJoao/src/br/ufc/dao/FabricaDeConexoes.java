@@ -12,7 +12,7 @@ public class FabricaDeConexoes {
 		Connection conn = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");  
-			conn = DriverManager.getConnection(url, "root", "crs2747");
+			conn = DriverManager.getConnection(url, "root", "zabbix");
 			System.out.println("conectado!");
 			
 		} catch (SQLException e) {
