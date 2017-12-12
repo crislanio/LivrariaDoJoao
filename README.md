@@ -11,7 +11,6 @@ Inicialmente, o João não quer armazenar os seus clientes, porém gostaria de g
 vendas, consultar qual o seu estoque de livros e quanto em dinheiro ele tem em caixa.
 
 ### Screenshots
-![alt tag](https://raw.githubusercontent.com/LivrariaDoJoao/tree/master/LivrariaDoJoao/WebContent/public/img/Screenshot at 2017-12-11 20:14:27.png)
-![alt tag](https://raw.githubusercontent.com/LivrariaDoJoao/tree/master/LivrariaDoJoao/WebContent/public/img/Screenshot at 2017-12-11 20:14:46.png)
-![alt tag](https://raw.githubusercontent.com/LivrariaDoJoao/tree/master/LivrariaDoJoao/WebContent/public/img/Screenshot at 2017-12-11 20:15:55.png)
-
+![alt tag](https://raw.githubusercontent.com/crislanio/LivrariaDoJoao/master/LivrariaDoJoao/WebContent/public/img/Screenshot at 2017-12-11 20:14:27.png)
+![alt tag](https://raw.githubusercontent.com/crislanio/LivrariaDoJoao/tree/master/LivrariaDoJoao/WebContent/public/img/Screenshot at 2017-12-11 20:14:46.png)
+![alt tag](https://raw.githubusercontent.com/crislanio/LivrariaDoJoao/tree/master/LivrariaDoJoao/WebContent/public/img/Screenshot at 2017-12-11 20:15:55.png)
