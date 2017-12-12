@@ -9,3 +9,9 @@ em estoque e um identificador único. Os livros de aventura possuem ilustraçõe
 livros de drama possuem capa dura; e os de comédia possuem capa tipo brochura.
 Inicialmente, o João não quer armazenar os seus clientes, porém gostaria de guardar as
 vendas, consultar qual o seu estoque de livros e quanto em dinheiro ele tem em caixa.
+
+### Screenshots
+![alt tag](https://raw.githubusercontent.com/LivrariaDoJoao/tree/master/LivrariaDoJoao/WebContent/public/img/Screenshot at 2017-12-11 20:14:27.png)
+![alt tag](https://raw.githubusercontent.com/LivrariaDoJoao/tree/master/LivrariaDoJoao/WebContent/public/img/Screenshot at 2017-12-11 20:14:46.png)
+![alt tag](https://raw.githubusercontent.com/LivrariaDoJoao/tree/master/LivrariaDoJoao/WebContent/public/img/Screenshot at 2017-12-11 20:15:55.png)
+
